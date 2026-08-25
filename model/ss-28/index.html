@@ -155,14 +155,14 @@ body { font-family: 'Inter', sans-serif; background: #0a0a0a; color: #fff; overf
     <button onclick="toggleDayNight()" id="btnDayNight2">🌙</button>
     <button onclick="toggleGrid()" id="btnGrid" class="active">⊞</button>
     <label>Màu:</label>
-    <input type="color" id="gridColor" value="#ffffff" onchange="changeGridColor(this.value)">
+    <input type="color" id="gridColor" value="#ababab" onchange="changeGridColor(this.value)">
     <label>Mờ:</label>
     <input type="range" id="gridOpacity" min="0" max="100" value="30" oninput="changeGridOpacity(this.value)">
     <span class="sep">|</span>
     <button onclick="toggleSpot()" id="btnSpot">🔦</button>
     <span class="sep">|</span>
     <label>Nền:</label>
-    <input type="color" id="bgColor" value="#ffffff" onchange="changeBg(this.value)">
+    <input type="color" id="bgColor" value="#ababab" onchange="changeBg(this.value)">
   </div>
 </div>
 <script type="importmap">
@@ -249,7 +249,7 @@ ground.position.y = -0.01;
 scene.add(ground);
 
 // Grid
-const grid = new THREE.GridHelper(10, 20, 0xffffff, 0xffffff);
+const grid = new THREE.GridHelper(10, 20, 0xababab, 0xababab);
 scene.add(grid);
 
 // Load GLB (no embedded texture — load externally for smaller GLB files)
@@ -405,7 +405,7 @@ function changeGridOpacity(val) {
   const mats = Array.isArray(gridObj.material) ? gridObj.material : [gridObj.material];
   mats.forEach(m => { m.transparent = op < 1; m.opacity = op; m.needsUpdate = true; });
 }
-changeGridColor('#ffffff');
+changeGridColor('#ababab');
 changeGridOpacity(30);
 
 let bgColorHex = 0xffffff;
