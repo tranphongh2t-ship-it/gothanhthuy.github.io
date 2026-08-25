@@ -257,7 +257,7 @@ let model = null;
 let wireframeOn = false;
 const loader = new GLTFLoader();
 const texLoader = new THREE.TextureLoader();
-const texUrl = '../images/ss18.webp';
+const texUrl = '../../images/ss18.webp';
 loader.load('../../models/ss18/model.glb', (gltf) => {
   model = gltf.scene;
   // Apply external texture to all mesh materials
