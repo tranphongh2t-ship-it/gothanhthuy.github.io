@@ -86,11 +86,11 @@ body { font-family: 'Inter', sans-serif; background: #0a0a0a; color: #fff; overf
   .controls { top: 8px; gap: 4px; padding: 4px 8px; }
   .controls button { padding: 4px 7px; font-size: 11px; }
   /* Show side icons, hide desktop panels */
-  .side-icons { display: flex; position: absolute; right: 8px; top: 50%; transform: translateY(-50%); flex-direction: column; gap: 8px; z-index: 15; }
-  .side-icon { width: 36px; height: 36px; font-size: 16px; }
+  .side-icons { display: flex; position: absolute; right: 8px; top: 8px; flex-direction: row; gap: 6px; z-index: 15; }
+  .side-icon { width: 34px; height: 34px; font-size: 15px; }
   .info-panel, .qr-panel { display: none; }
-  .info-panel.mobile-open { display: block; position: absolute; right: 52px; left: 8px; bottom: 50px; top: auto; max-width: none; transform: none; z-index: 14; }
-  .qr-panel.mobile-open { display: flex; position: absolute; right: 52px; left: 8px; bottom: 50px; top: auto; max-width: none; transform: none; z-index: 14; }
+  .info-panel.mobile-open { display: block; position: absolute; right: 8px; left: 8px; top: 50px; top: auto; max-width: none; transform: none; z-index: 14; }
+  .qr-panel.mobile-open { display: flex; position: absolute; right: 8px; left: 8px; top: 50px; top: auto; max-width: none; transform: none; z-index: 14; }
   .qr-panel.mobile-open svg { width: 70px; height: 70px; }
   /* Bottom bar: full width, sát lề */
   .bottom-bar { padding: 5px 6px; gap: 3px; }
