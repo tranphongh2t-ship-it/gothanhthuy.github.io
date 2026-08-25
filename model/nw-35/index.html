@@ -345,8 +345,20 @@ function toggleOrientation() {
   document.getElementById('btnOrientation').textContent = isStanding ? '📐 Nằm' : '📐 Đứng';
   resetCamera();
 }
-function zoomIn() { controls.dollyIn(1.2); }
-function zoomOut() { controls.dollyOut(1.2); }
+function zoomIn() {
+  const dir = new THREE.Vector3();
+  camera.getWorldDirection(dir);
+  camera.position.addScaledVector(dir, 0.5);
+  controls.target.addScaledVector(dir, 0.5);
+  controls.update();
+}
+function zoomOut() {
+  const dir = new THREE.Vector3();
+  camera.getWorldDirection(dir);
+  camera.position.addScaledVector(dir, -0.5);
+  controls.target.addScaledVector(dir, -0.5);
+  controls.update();
+}
 let gridVisible = true;
 let gridObj = grid;
 function toggleGrid() {
